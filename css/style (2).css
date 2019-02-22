@@ -12,6 +12,10 @@ header {
 
 }
 
+img{
+	max-width: 100%;
+	height: auto;
+}
 header .container {
   position: relative;
   z-index: 2;
@@ -38,21 +42,3 @@ header .overlay {
   }
 }
 
-#calendar-container{
-  border: 1px solid #eee;
-  border-radius: 10px;
-  height: 210px;
-  width: 210px;
-  padding: 10px;
-  text-align: center;
-  font-size: 16px;
-  font-family: Arial;
-  background-image: linear-gradient(#fff,#d3d3d3); 
-}
-#calendar-container>div{
-  padding: 0;
-  margin-bottom: 10px;
-  
-
-
-}

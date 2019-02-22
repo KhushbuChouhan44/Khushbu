@@ -1,4 +1,3 @@
-<!DOCTYPE html> <!--html5 declaration-->
 <html lang="eng">
 <head>
 	<meta charset="UTF-8">
@@ -16,21 +15,7 @@
 	<link rel="stylesheet" =href="css/style.css">
 
 	<title>Eventbot</title>
-	<!-- for Responsive Video -->
-	<style>
-		/*video {
-		  top: 50%;
-		  left: 50%;
-		  width: 100%;		  
-		  height: auto ;
-		  opacity: 0.9;
-		  padding-left: 4%;
-		  padding-top: 4%;
-		 }*/
 
-	</style> 
-
-	<!-- For Form -->
 	<style type="text/css">
 	body {
 		color: #999;
@@ -41,11 +26,10 @@
 	.dropbtn {
   background-color: #4CAF50;
   color: white;
-  padding: 16px;
+  padding: 20px;
   font-size: 16px;
   border: none;
   cursor: pointer;
-  margin-left: 4px;
   margin-top: 20px; 
 }
 
@@ -93,6 +77,75 @@
 
 .show {display: block;}
 
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 700px;
+  position: relative;
+  margin-left: 400px;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2.5s;
+  animation-name: fade;
+  animation-duration: 2.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
 
 </style>
 <!-- for user icon-->
@@ -128,25 +181,54 @@
 	<div class="container-fluid no-padding">
 		<div class="row ">
 			<div class="col-lg-8">
-	<font color="#888c8c" face="Butler Bold" size="6">Wanna explore events of your interests?</font>
+	<font color="#888c8c" face="Butler Bold" size="10">Wanna explore events of your interests?</font>
 		</div>
 		
 		
 </div>
 </div>
 <div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn">Search</button>
+  <button onclick="myFunction()" class="dropbtn">Pick a category</button>
   <div id="myDropdown" class="dropdown-content">
-    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+    <input type="text" placeholder="Search..." id="myInput" onkeyup="filterFunction()">
     <a href="#about">Arts</a>
     <a href="#base">Books</a>
     <a href="#blog">Culture</a>
     <a href="#contact">Dance</a>
     <a href="#custom">Food</a>
-    <a href="#support">Sports</a>
+    <a href="#support">Fun</a>
     <a href="#tools">Technology</a>
   </div>
 </div>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="health.jpg" style="width:100%">
+  <div class="text">Health and Fitness</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="tech.jpg" style="width:100%">
+  <div class="text">Technology</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="books.jpg" style="width:100%">
+  <div class="text">Literature</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
 <script>
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
@@ -168,6 +250,25 @@ function filterFunction() {
       a[i].style.display = "none";
     }
   }
+}
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2500); // Change image every 2 seconds
 }
 </script>
 
