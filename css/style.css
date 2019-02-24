@@ -39,7 +39,8 @@ header .overlay {
 }
 
 #calendar-container{
-  border: 1px solid #eee;
+    float: right;
+  border: 10px solid black;
   border-radius: 10px;
   height: 210px;
   width: 210px;
@@ -52,7 +53,12 @@ header .overlay {
 #calendar-container>div{
   padding: 0;
   margin-bottom: 10px;
-  
+}
 
+#calendar-month-year{
+  margin: 5px;
+}
 
+#calendar-dates>table>tr>td{
+  padding: 5px;
 }
