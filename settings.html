@@ -44,45 +44,47 @@
 
 
 </head>
-<body style="background-color: white">
-	<!-- Start Navigation -->
-	<nav class="navbar navbar-expand-sm navbar-dark bg-success fixed top">
-		<!-- Logo -->
-		<a href="index.html" class="navbar-brand">EventBot</a>
-		<!-- Tagline -->
-		<span class="navbar-text">Events - Anytime, Anywhere!</font></span>
-		<!-- Toggle Button -->
-		<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myMenu">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<!-- End Toggle button -->
-		<div class="collapse navbar-collapse" id="myMenu">
-			
-			<ul class="navbar-nav ml-auto"> 
-				<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
-				<i style='font-size:36px;' class='far'>&#xf007;</i>
+	<body style="background-color: white">
+	<div id="main">
+		<div class="container-fluid">
+		<!-- Navigation Menu -->
+		<nav class="navbar navbar-expand-sm navbar-light  fixed top img-responsive" >
+			<!-- Logo -->
 
-			</ul>
+			<a href="index.html" class="navbar-brand " style="color: rgb(65,68,75); font-weight: 700; font-family: Comic Sans MS"><img src="images/logo1.jpg">Eventbot</a>
+
+			<!-- Tagline -->
+			<span class="navbar-text" style="color: rgb(4,209,239);">Events - Anytime, Anywhere!</span>
 			
-				
-		</div>
-		
-	</nav>
+			<!-- Toggle Button -->
+			<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myMenu">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<!-- End Toggle button -->
+			<div class="collapse navbar-collapse" id="myMenu">
+				<ul class="navbar-nav ml-auto"> 
+				<!-- the above class arranges the blue href lines into a proper display of options -->
+				<!-- The pl-5 class aligns login and signup to the left side -->
+					<li class="nav-item"><a href="indexnew.html" class="nav-link">Home</a></li>
+					<li class="nav-item"><a href="aboutUs.html" class="nav-link">About Us</a></li>
+				</ul>
+			</div>
+		</nav>
 	<!-- End Navigation -->
 	<main class="box">
-		<div style="padding-left: 60px;"><i class="fa fa-gears" style="font-size:40px; align-items: center;">Account Settings</i>
+		<div style="padding-left: 60px;"><i class="fa fa-gears" style="font-size:40px; align-items: center;">
+			Account Settings</i>
 		</div>
 		<br><br>
 		<i class="fa fa-user-circle" style="font-size:90px; margin-left: 190px;"></i><br><p style="margin-left: 190px; margin-top: 20px;">Profile Photo!</p>
-	<form style="margin: 20px 40px 20px 40px; padding: 10px 20px 20px 20px; background: transparent; ">Name<input type="text" name="username" placeholder="username" style="margin-left: 61px; margin-top: 20px;"><br>
+		<form style="margin: 20px 40px 20px 40px; padding: 10px 20px 20px 20px; background: transparent; ">Name<input type="text" name="username" placeholder="username" style="margin-left: 61px; margin-top: 20px;"><br>
 		E-mail<input type="text" name="email" placeholder="mail-id" style="margin-left: 60px; margin-top: 20px;"><br>
 		Gender<input type="radio" name="gender" value="female" style="margin-left: 60px; margin-top: 20px;">Female<input type="radio" name="gender" value="male" style="margin-left: 10px;">Male<input type="radio" name="gender" value="other" style="margin-left: 10px;">Other<br>
 		My interests<input type="checkbox" name="category1" value="arts" style="margin-left: 20px; margin-top: 20px;">Arts<input type="checkbox" name="category2" value="arts" style="margin-left: 10px; margin-top: 20px;">Books<input type="checkbox" name="category3" value="arts" style="margin-left: 10px; margin-top: 20px;">Culture<input type="checkbox" name="category4" value="arts" style="margin-left: 10px; margin-top: 20px;">Dance<br><input type="checkbox" name="category5" value="arts" style="margin-left: 107px; margin-top: 20px;">Food<input type="checkbox" name="category6" value="arts" style="margin-left: 10px; margin-top: 20px;">Fun<input type="checkbox" name="category7" value="arts" style="margin-left: 10px; margin-top: 20px;">Technology<input type="checkbox" name="category8" value="arts" style="margin-left: 10px; margin-top: 20px;">Music<br>
 		Location<input type="text" name="Location" placeholder="user's location" style="margin-left: 45px; margin-top: 20px;"><br>
 		<input type="button" name="save" value="Save Changes" style="margin-left: 5px; margin-top: 40px;">
 		<input type="button" name="discard" value="Discard" style="margin-left: 23px; margin-top: 40px;"><br>
-		<button style="color: rgb(256,256,256); text-align: center;font-size: 16px; cursor: pointer; padding: 15px 32px; background: #4CAF50; border: none; margin-top: 40px; font-family: monospace;">Deactivate Account</button>
+		<button style="color: white; text-align: center;font-size: 16px; cursor: pointer; padding: 5px 32px;background-color: rgb(60,90,153);der: none; margin-top: 40px; font-family: monospace;">Deactivate Account</button>
 	</form>
 
 	<!-- JQuery Popper JS Bootstrap -->
